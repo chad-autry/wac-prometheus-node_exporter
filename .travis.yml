@@ -7,8 +7,8 @@ node_js:
 - 'node'
 env:
   global:
-  - PROJECT: "wac-prometheus-node_exporter"
-  - GH_REF: github.com/chad-autry/$PROJECT
+  - PROJECT: wac-prometheus-node_exporter
+  - GH_REF: github.com/chad-autry/wac-prometheus-node_exporter
 
 script:
 - docker build -t chadautry/$PROJECT:latest .
