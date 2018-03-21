@@ -4,7 +4,7 @@ ENV node_exporter_version 0.15.2
 
 RUN apk update \
     && apk add --no-cache curl tar \
-    curl -LO https://github.com/prometheus/node_exporter/releases/download/v${node_exporter_version}/node_exporter-${node_exporter_version}.linux-amd64.tar.gz \
+    && curl -LO https://github.com/prometheus/node_exporter/releases/download/v${node_exporter_version}/node_exporter-${node_exporter_version}.linux-amd64.tar.gz \
     && tar -xvzf node_exporter-${node_exporter_version}.linux-amd64.tar.gz  \
     && mv node_exporter-${node_exporter_version}.linux-amd64/node_exporter /bin/
     && apk del --purge curl tar
